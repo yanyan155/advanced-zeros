@@ -42,7 +42,7 @@ module.exports = function getZerosCount(number, base) {
   }
 
   function cleaningArr() {
-    
+
       let quantity;
       for(let j = arrayOfDeliverObjs.length -1; j>=0; j--) {
       if( j=== arrayOfDeliverObjs.length || arrayOfDeliverObjs[j].quantity <= quantity) {
@@ -57,7 +57,7 @@ module.exports = function getZerosCount(number, base) {
   function findDeliverCountInNumber(number, deliver) {
 
     let count = 0;
-    for (let i = 2; i <= number; i++) {
+    for (let i = deliver; i <= number; i += deliver) {
       let j = i;
       while (j%deliver === 0) {
         count++;
