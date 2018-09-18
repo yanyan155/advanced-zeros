@@ -45,9 +45,9 @@ module.exports = function getZerosCount(number, base) {
 
       let quantity;
       for(let j = arrayOfDeliverObjs.length -1; j>=0; j--) {
-      if( j=== arrayOfDeliverObjs.length || arrayOfDeliverObjs[j].quantity <= quantity) {
+      if( j=== arrayOfDeliverObjs.length || arrayOfDeliverObjs[j].quantity <= quantity
+          || arrayOfDeliverObjs[j+1]*arrayOfDeliverObjs[j].quantity > arrayOfDeliverObjs[j]*arrayOfDeliverObjs[j].quantity) {
         arrayOfDeliverObjs.splice(j,1);
-        j--;
       } else {
         quantity = arrayOfDeliverObjs[j].quantity;
       }
